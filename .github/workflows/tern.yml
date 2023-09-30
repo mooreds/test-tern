@@ -11,7 +11,7 @@ jobs:
           image: alpine:latest
           format: yaml
           output: alpine.yaml
-      - uses: actions/upload-artifact@v2
-        with:
-          name: tern 
-          path: ${{ steps.scan.outputs.file }} 
+      - name: print output
+        run: |
+          cat ${{ steps.scan.outputs.file }} 
+        shell: bash
