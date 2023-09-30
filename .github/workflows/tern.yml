@@ -8,7 +8,7 @@ jobs:
       - uses: philips-labs/tern-action@v1.3.0
         id: scan
         with:
-          image: alpine:latest
+          image: fusionauth/fusionauth-app:latest
           format: yaml
           output: alpine.yaml
       - name: print output
